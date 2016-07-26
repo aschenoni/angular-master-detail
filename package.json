@@ -1,0 +1,26 @@
+{
+  "name": "angular-master-detail",
+  "version": "0.0.1",
+  "description": "A master detail view directive to display table data as a list with details on the side",
+  "main": "master-detail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aschenoni/angular-master-detail.git"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "master-detail",
+    "table",
+    "list"
+  ],
+  "author": "Austin Joyner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aschenoni/angular-master-detail/issues"
+  },
+  "homepage": "https://github.com/aschenoni/angular-master-detail#readme"
+}
