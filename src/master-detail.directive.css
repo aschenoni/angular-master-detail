@@ -1,0 +1,173 @@
+/* for reference only. Css is included in style tag in the template load */
+master-detail .select-list {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+master-detail .list-filler {
+	height: auto;
+	flex: auto;
+}
+
+master-detail .select-item{
+	transition: .5s linear;
+	transition: 0.01s color linear;
+	height: 6em;
+	padding: 0.5em;
+	border-bottom: solid 0.1em;
+	border-color: rgb(200, 200, 200);
+	display: block;
+	position: relative;
+}
+
+master-detail .select-item-toolbar {
+	height: auto;
+	padding: 5px;
+	position: relative;
+}
+
+master-detail .detail-pane {
+	padding-left: 1.5em;
+	padding-top: 1em;
+	border: solid rgb(200, 200, 200) 0.1em;
+}
+
+master-detail .master-detail-container {
+	display: flex;
+	font-family: helvetica;
+	margin-top: 1em;
+}
+
+master-detail .item-header {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+master-detail .item-detail {
+	font-style: italic;
+}
+
+master-detail label {
+	padding-right: 0.1em;
+}
+
+master-detail div.detailPane label {
+	color: green;
+}
+
+master-detail .input-label {
+	padding-bottom: 0px; 
+	line-height: 26px; 
+	float:right;
+}
+
+master-detail .detail-input {
+	float:right; 
+	padding-left: 5px;
+}
+
+master-detail .detail-dropdown {
+	width: 179px;
+	height: 26px;
+}
+
+master-detail .select-item.ng-enter, .select-item.ng-leave-active, .select-item.ng-move {
+	-webkit-animation: md-enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+	animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+	display: block;
+	position: relative;
+}
+
+master-detail .select-item.ng-enter-active, .select-item.ng-leave, .select-item.ng-move-active {
+	border-color: rgb(200, 200, 200);
+	opacity: 1;
+	top:0;
+	height: 6em;
+}
+
+
+@-webkit-keyframes md-enter {
+	from {
+		opacity: 0;
+		height: 0px;
+		left: -70px;
+	}
+	75% {
+		left: 15px;
+	}
+	to {
+		opacity: 1;
+		height: 6em;
+		left: 0px;
+	}
+}
+
+@keyframes md-enter {
+	from {
+		opacity: 0;
+		height: 0px;
+		left: -70px;
+	}
+	75% {
+		left: 15px;
+	}
+	to {
+		opacity: 1;
+		height: 6em;
+		left: 0px;
+	}
+}
+
+
+@-webkit-keyframes leave {
+	to {
+		opacity: 0;
+		height: 0px;
+		left: -70px;
+	}
+	25% {
+		left: 15px;
+	}
+	from {
+		opacity: 1;
+		height: 6em;
+		left: 0px;
+	}
+}
+
+@keyframes leave {
+	to {
+		opacity: 0;
+		height: 0px;
+		left: -70px;
+	}
+	25% {
+		left: 15px;
+	}
+	from {
+		opacity: 1;
+		height: 6em;
+		left: 0px;
+	}
+}
+
+master-detail .current-item {
+	color: #373e44;
+	background-color: #c0c1c1;
+}
+
+master-detail .refresh-animation {
+	animation: md-refresh 0.5s;
+}
+
+@keyframes md-refresh {
+	0% {
+		opacity: 1;	
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

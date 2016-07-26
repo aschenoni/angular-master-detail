@@ -2,7 +2,7 @@
   "name": "angular-master-detail",
   "version": "0.0.1",
   "description": "A master detail view directive to display table data as a list with details on the side",
-  "main": "master-detail.js",
+  "main": "src/master-detail.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

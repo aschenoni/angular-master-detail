@@ -1,0 +1,45 @@
+<!--For Reference only. Html loaded in template -->
+<div class="master-detail-container">
+	<div class="select-list col-xs-4">
+		<div class="select-item-toolbar">
+			<div style="width:100%; padding-right: 45px;"><input style="width:100%; vertical-align:middle; height: 34px"></div>
+			<div style="display:inline; text-align: center">
+				<div class="btn glyphicon glyphicon-plus otis-color" ng-click="addAndSelect()" style="display: inline-block; float:none; top: 5; right: 5; position: absolute;"></div>
+			</div>
+		</div>
+		<div class="select-item"
+			 ng-class="{'current-item': $index === currentIndex}"
+			 ng-repeat="item in items track by tracker(item)"
+			 ng-click="updateDetailPane($index)">
+			<div class="item-header">{{header(item)}}</div>
+			<div class="item-detail" ng-repeat="detail in details">{{detail(item)}}</div>
+		</div>
+		<div class="list-filler"></div>
+	</div>
+	<div class="detail-pane col-xs-8">
+		<div>
+			<div ng-hide="!currentItem" style="display: inline-block" ng-class="{'refresh-animation': isRefreshingTransition}">
+				<h4 class="item-header">{{header(currentItem)}}</h4>
+					<div ng-repeat="detailProp in detailDisplay" style="padding-bottom: 5px; vertical-align: middle;">
+						<input ng-if="!detailProp.type" 
+							class="detail-input" 
+							ng-model="currentItem[detailProp.property]">
+						<input ng-if="detailProp.type === 'password'" 
+							type="password" 
+							class="detail-input" 
+							ng-model="currentItem[detailProp.property]">
+						<select ng-if="detailProp.type === 'dropdown'" 
+							class="detail-input detail-dropdown" 
+							ng-model="currentItem[detailProp.property]"
+							ng-options="item as prettify(item) for item in detailProp.listItems">
+						</select>
+						<label class="input-label">{{prettify(detailProp.label || detailProp.property)}}:</label>
+					</div>
+				<div style="padding-bottom: 20px; float: right">
+					<div class="btn btn-success" ng-click="save()">Save</div>
+					<div class="btn btn-danger">Delete</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
