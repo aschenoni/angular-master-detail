@@ -1,6 +1,6 @@
 {
   "name": "angular-master-detail",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A master detail view directive to display table data as a list with details on the side",
   "main": "src/master-detail.js",
   "scripts": {
